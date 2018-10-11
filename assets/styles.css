@@ -1,0 +1,103 @@
+/*  CSS Document                             */
+
+@import url(http://fonts.googleapis.com/css?family=Indie+Flower);
+
+body { 
+    /* background-color: #45180a;  */
+    background: rgb(69,24,10);
+    background: linear-gradient(175deg, rgba(69,24,10,1) 30%, rgba(250,228,189,1) 100%);
+}
+
+.promo {
+    position: relative;
+    margin: 40px;
+    font-size: 16px;
+    font-family: 'Indie Flower', cursive;
+}
+
+.promo video {
+    width: 100%;
+    border: 1px solid white;
+}
+
+/* If you want the video to take up the entire background 
+    will also need to remove position relative from .promo*/
+/* .promo video {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -10;
+} */
+
+.promo img {
+    width: 200px;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    margin-left: -100px;
+}
+
+.promo .caption {
+    position: absolute;
+    left: 1px;
+    bottom: 60px;
+    /* background-color: rgba(69,24,10,.8); */
+    background: rgb(69,24,10);
+    /* background: linear-gradient(150deg, rgba(69,24,10,1) 70%, rgba(250,228,189,1) 100%); */
+    width: 100%;
+}
+
+.promo .caption p {
+    font-size: 2.5rem;
+    margin: 0;
+    padding: 10px 0px;
+    text-align: center;
+    color: white;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+@media screen and (max-width: 700px) {
+    .promo img {
+        top: 15px;
+        width: 120px;
+        margin-left: -60px;
+    }
+    .promo .caption p {
+        font-size: 2em;
+        line-height: 22px;
+        padding: 10px 0px;
+    }
+}
+
+
+@media screen and (max-width: 450px) {
+    .promo {
+        margin: 15px;
+        padding: 175px 0px 40px 0px;
+        border: 1px solid white;
+        background: url(muffins.jpg) no-repeat center bottom;
+        background-size: cover;
+        /* We don't small divices and screens to have an autoplay as it will eat up data, so change it to just be a picture */
+    }
+    .promo video {
+        display: none;
+    }
+    .promo img {
+        top: 15px;
+        width: 90px;
+        margin-left: -45px;
+    }
+    .promo .caption {
+        position: static
+    }
+    .promo .caption p {
+        font-size: 1.4em;
+        line-height: 22px;
+        padding: 10px 0px;
+    }
+}
